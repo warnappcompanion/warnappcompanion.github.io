@@ -1,0 +1,28 @@
+PRIVACY POLICY
+
+This is the privacy policy for the Warn-App-Companion Android App (“WAC”).
+
+WAC was designed with your privacy in mind, it does most of the processing on your device, 
+and only accesses the internet where that is absolutely necessary, as explained below.
+
+You can verify this by reviewing the source code at https://github.com/mh-/corona-warn-companion-android
+and if desired, you can also build WAC from this source code yourself.
+
+Features:
+
+1. WAC reads the Rolling Proximity IDs (RPIs) and timestamps recorded by your device from the Exposure Notifications database.
+   Alternatively, WAC can also read a database exported from a “RaMBLE - Bluetooth LE Mapper” app. 
+   That database contains e.g. RPIs, timestamps, and geographical locations, as recorded by the RaMBLE app.
+   WAC does not record RPIs or geographical locations on its own, it only imports them from other databases.
+   WAC only runs when you start it, it does not run in the background. To record the data mentioned above, 
+   you need to use either your device’s Exposure Notifications framework, or the RaMBLE app.
+2. WAC downloads the Diagnosis Keys from the official German Corona-Warn-Server and other countries’ servers, as selected by you.
+3. WAC compares both in order to find matches (risk encounters).
+4. If risk encounters are found, WAC shows details, including e.g. timestamps and attenuation (which relates to distance).
+5. For encounters that were recorded by RaMBLE, WAC can also display the location. If you activate this location feature, 
+   WAC will use the OSMdroid framework, which will send the location information to, and download a map from, OpenStreetMap servers.
+   
+WAC only accesses the internet for the features 2. (download data from the official warning servers), 
+and 5. (if you ask WAC to show the location of an encounter, it will contact OpenStreetMap servers through the OSMdroid framework).
+
+WAC does not show any advertising.
